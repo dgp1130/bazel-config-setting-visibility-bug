@@ -1,5 +1,7 @@
 # Bazel Visibility Bug
 
+Bug report: https://github.com/bazelbuild/bazel/issues/19126
+
 ```
 $ bazel build //:my_target
 ERROR: /home/doug/Source/bazel_visibility/BUILD.bazel:3:8: in my_rule rule //:my_target: target '//config_setting:my_setting' is not visible from target '//build_defs:defs.bzl'. Check the visibility declaration of the former target if you think the dependency is legitimate
