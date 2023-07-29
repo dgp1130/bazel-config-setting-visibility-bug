@@ -1,0 +1,9 @@
+load("//build_defs:defs.bzl", "my_rule")
+
+my_rule(
+    name = "my_target",
+    value = select({
+        "//config_setting:my_setting": "foo",
+        "//conditions:default": "bar",
+    }),
+)

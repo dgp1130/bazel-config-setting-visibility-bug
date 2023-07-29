@@ -1,0 +1,15 @@
+# NECESSARY! The config setting *must* be in a different package from
+# `//:my_target`.
+
+load("@bazel_skylib//rules:common_settings.bzl", "bool_flag")
+
+bool_flag(
+    name = "my_flag",
+    build_setting_default = False,
+)
+
+config_setting(
+    name = "my_setting",
+    flag_values = {":my_flag": "True"},
+    visibility = ["//:__pkg__"],
+)

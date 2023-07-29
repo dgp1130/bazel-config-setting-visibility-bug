@@ -1,0 +1,4 @@
+build --incompatible_visibility_private_attributes_at_definition
+
+# Doesn't help.
+# build --incompatible_enforce_config_setting_visibility
